@@ -1,0 +1,60 @@
+plugins {
+    id 'com.android.application'
+}
+
+def rafeeqServerUrl = providers.gradleProperty('rafeeqUrl').orElse('https://3000-i2s6p0e8xnu96l33ba687.e2b.app').get()
+def signingPropertiesFile = rootProject.file('../data/android-signing/signing.properties')
+def signingProperties = new Properties()
+def hasBetaSigning = signingPropertiesFile.exists()
+if (hasBetaSigning) {
+    signingPropertiesFile.withInputStream { signingProperties.load(it) }
+}
+
+android {
+    namespace 'com.farouq.rafeeq'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.farouq.rafeeq'
+        minSdk 24
+        targetSdk 35
+        versionCode 3
+        versionName '1.0.0-release'
+        buildConfigField 'String', 'RAFEEQ_URL', "\"${rafeeqServerUrl}\""
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    signingConfigs {
+        beta {
+            if (hasBetaSigning) {
+                storeFile file(signingProperties['storeFile'])
+                storePassword signingProperties['storePassword']
+                keyAlias signingProperties['keyAlias']
+                keyPassword signingProperties['keyPassword']
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix '.beta'
+            versionNameSuffix '-debug'
+            debuggable true
+            if (hasBetaSigning) signingConfig signingConfigs.beta
+        }
+        release {
+            minifyEnabled false
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            if (hasBetaSigning) signingConfig signingConfigs.beta
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}

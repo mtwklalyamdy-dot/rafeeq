@@ -1,0 +1,1 @@
+import { AIClient } from "@/components/ai-client";export default async function AIPage({searchParams}:{searchParams:Promise<{tab?:string}>}){const p=await searchParams;return <AIClient initialTab={p.tab}/>}

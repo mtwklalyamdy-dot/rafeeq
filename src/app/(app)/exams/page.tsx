@@ -1,0 +1,1 @@
+import { ExamsClient } from "@/components/service-clients";export default function ExamsPage(){return <ExamsClient/>}

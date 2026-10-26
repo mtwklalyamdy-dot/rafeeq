@@ -1,0 +1,3 @@
+import { AuthShell } from "@/components/auth/auth-shell";
+import { LoginForm } from "@/components/auth/login-form";
+export default function RepresentativeLoginPage(){return <AuthShell eyebrow="بوابة المندوب الطلابي"><LoginForm representative/></AuthShell>}

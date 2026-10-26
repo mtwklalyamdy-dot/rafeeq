@@ -1,0 +1,1 @@
+import { ToolsClient } from "@/components/service-clients";export default function ToolsPage(){return <ToolsClient/>}

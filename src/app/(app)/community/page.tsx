@@ -1,0 +1,1 @@
+import { CommunityClient } from "@/components/community-client";export default function CommunityPage(){return <CommunityClient/>}

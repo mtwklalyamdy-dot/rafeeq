@@ -1,0 +1,1 @@
+import { GradesClient } from "@/components/service-clients";export default function GradesPage(){return <GradesClient/>}
