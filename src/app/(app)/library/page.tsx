@@ -1,0 +1,1 @@
+import { LibraryClient } from "@/components/academic-clients";export default async function LibraryPage({searchParams}:{searchParams:Promise<{courseId?:string}>}){const p=await searchParams;return <LibraryClient initialCourseId={p.courseId}/>}

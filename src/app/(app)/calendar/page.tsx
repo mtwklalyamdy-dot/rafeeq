@@ -1,0 +1,1 @@
+import { CalendarClient } from "@/components/extra-clients";export default function CalendarPage(){return <CalendarClient/>}

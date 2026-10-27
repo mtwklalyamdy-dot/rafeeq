@@ -1,0 +1,1 @@
+import { OfflineClient } from "@/components/service-clients";export default function OfflinePage(){return <OfflineClient/>}

@@ -1,0 +1,15 @@
+{
+  "name": "رفيقي — رفيقك في طريقك الأكاديمي",
+  "short_name": "رفيقي",
+  "description": "منصة أكاديمية عربية لطلاب الجامعات في اليمن",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/dashboard",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4f7f6",
+  "theme_color": "#087767",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

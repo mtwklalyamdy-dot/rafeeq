@@ -1,0 +1,1 @@
+import { AssignmentsClient } from "@/components/academic-clients";export default function AssignmentsPage(){return <AssignmentsClient/>}

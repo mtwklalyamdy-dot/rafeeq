@@ -1,0 +1,1 @@
+import { NotesClient } from "@/components/notes-client";export default function NotesPage(){return <NotesClient/>}

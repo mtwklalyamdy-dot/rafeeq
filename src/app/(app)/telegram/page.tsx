@@ -1,0 +1,1 @@
+import { TelegramClient } from "@/components/service-clients";export default function TelegramPage(){return <TelegramClient/>}

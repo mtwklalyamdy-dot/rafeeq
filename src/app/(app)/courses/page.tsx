@@ -1,0 +1,1 @@
+import { CoursesClient } from "@/components/academic-clients";export default function CoursesPage(){return <CoursesClient/>}

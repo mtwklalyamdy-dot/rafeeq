@@ -1,0 +1,1 @@
+import { DictionaryClient } from "@/components/extra-clients";export default function DictionaryPage(){return <DictionaryClient/>}

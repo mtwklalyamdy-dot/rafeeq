@@ -1,0 +1,1 @@
+import { SettingsClient } from "@/components/management-clients";import { requireUser } from "@/lib/auth";export default async function SettingsPage(){const user=await requireUser();return <SettingsClient user={{fullName:user.fullName,email:user.email,studentNumber:user.studentNumber,groupName:user.groupName,createdAt:user.createdAt.toISOString()}}/>}

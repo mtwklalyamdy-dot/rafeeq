@@ -1,0 +1,32 @@
+# Dependencies and Next.js output
+node_modules/
+.next/
+out/
+
+# Environment secrets
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Runtime private data and backups
+data/
+backups/
+*.dump
+
+# Logs and temporary files
+*.log
+.DS_Store
+
+# Android build output and signing secrets
+android/.gradle/
+android/local.properties
+android/app/build/
+*.jks
+*.keystore
+*.pem
+*.p12
+
+# Keep only the explicitly published beta APK
+*.apk
+!public/downloads/rafeeq-beta.apk
